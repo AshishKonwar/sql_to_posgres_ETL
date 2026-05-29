@@ -1,0 +1,27 @@
+{
+  "name": "sql_to_postgres_service",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Ashish Konwar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "logger": "^0.0.1",
+    "msnodesqlv8": "^5.2.0",
+    "mssql": "^6.4.1",
+    "nodemon": "^3.1.14",
+    "pg": "^8.21.0",
+    "prisma": "^7.8.0",
+    "winston": "^3.19.0"
+  }
+}

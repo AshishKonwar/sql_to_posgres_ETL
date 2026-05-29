@@ -1,0 +1,153 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model DAILYHAZ {
+  PAYCD        String?
+  PAYSLIPCD    String?
+  bkno         Int?
+  GRP_CODE     String?
+  GARDEN_COD   String?
+  P_F_O        String?
+  KAM_CODE     String?
+  ACTIVE       String?
+  WDAY         String?
+  HAZ_TYPE     String?
+  KG           String?
+  KG_M         String?
+  KG_N         String?
+  KG_E         String?
+  LEAF_AMT     Decimal?  @db.Decimal
+  DATE         DateTime? @db.Timestamp(6)
+  WAGE         Decimal?  @db.Decimal
+  DELETE       String?
+  EXTRA        Decimal?  @db.Decimal
+  OT_HR        String?
+  WORKCD       String?
+  slno         String?
+  incentiv     String?
+  id           Int?
+  fk_sirder_id Int?
+  fk_add_id    Int?
+  fk_edit_id   Int?
+  date_add     DateTime? @db.Timestamp(6)
+  date_edit    DateTime? @db.Timestamp(6)
+  from_logger  String?
+  Time1        String?
+  TIME12       String?
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model DlyImport {
+  PAYCD          String?
+  bkno           Int?
+  GARDEN_COD     String?
+  HAZ_TYPE       String?
+  KG             String?
+  KG_M           String?
+  KG_N           String?
+  KG_E           String?
+  KG_4           String?
+  DATE           DateTime? @db.Timestamp(6)
+  WAGE           Decimal?  @db.Decimal
+  WORKCD         String?
+  fk_sirder_id   Int?
+  fk_add_id      Int?
+  rec_type       String?
+  Section_01     String?
+  Section_02     String?
+  Section_03     String?
+  Section_04     String?
+  TiccaNonTicca1 String?
+  TiccaNonTicca2 String?
+  TiccaNonTicca3 String?
+  TiccaNonTicca4 String?
+  Garden_divsion Int?
+  Optrcode       String?
+  MachineNo      String?
+  Time1          String?
+  Time2          String?
+  Time3          String?
+  Time4          String?
+  StartTime      String?
+  EndTime        String?
+  payslipcd      String?
+  P_F_O          String?
+  id             Int?
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model DlyImport_Log {
+  trnDate      DateTime? @db.Timestamp(6)
+  Fk_add_date  DateTime? @db.Timestamp(6)
+  Fk_user_name String?
+  TableName    String?
+  MachineNo    String?
+  NoRecs       String?
+  KG           String?
+  KG_M         String?
+  KG_N         String?
+  KG_E         String?
+  KG_4         String?
+  WAGE         Decimal?  @db.Decimal
+  pk_dlog_id   Int?
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model HAZDATE {
+  SNO        String?
+  DATE       DateTime? @db.Timestamp(6)
+  CDATE      String?
+  CMON       String?
+  DAY        String?
+  KAMJARI_UP String?
+  UPD_REM    String?
+  UPD_DATE   DateTime? @db.Timestamp(6)
+  DATA_DATE  DateTime? @db.Timestamp(6)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model WORKMST {
+  WORKCD          String?
+  WORKDESP        String?
+  GARDEN_COD      String?
+  P_F_O           String?
+  KAM_CODE        String?
+  YR_B_MAN        String?
+  YR_B_WAGE       String?
+  CATAGORY        String?
+  grpcode         Int?
+  task_Unit       String?
+  task_rate       Int?
+  task_rateYN     String?
+  active          String?
+  actdate         DateTime? @db.Timestamp(6)
+  reason4Inactive String?
+  InactiveDate    DateTime? @db.Timestamp(6)
+  DlyMandays      String?
+  FntlyMandays    String?
+  BalMandays      String?
+  DlyBudEnt_date  DateTime? @db.Timestamp(6)
+
+  @@ignore
+}
+
+model dailyhaz_summary {
+  workcd      String   @id
+  total_count BigInt?
+  total_wage  Decimal? @db.Decimal
+}

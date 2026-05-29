@@ -1,0 +1,10 @@
+[2026-05-28 07:54:26] ERROR: Migration failed UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+ReferenceError: UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+    at migrateDailyHazSummary (C:\Projects\sql_to_postgres_service\src\services\migrateDailyHazSummary.js:46:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async C:\Projects\sql_to_postgres_service\server.js:18:9
+[2026-05-28 07:54:26] ERROR: Error occurred while migrating DAILYHAZ summary UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+ReferenceError: UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+    at migrateDailyHazSummary (C:\Projects\sql_to_postgres_service\src\services\migrateDailyHazSummary.js:46:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async C:\Projects\sql_to_postgres_service\server.js:18:9

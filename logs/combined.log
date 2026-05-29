@@ -1,0 +1,499 @@
+[2026-05-28 07:54:22] INFO: Starting DAILYHAZ summary migration
+[2026-05-28 07:54:22] INFO: Connected to SQL Server
+[2026-05-28 07:54:22] INFO: Fetched 39 aggregated rows
+[2026-05-28 07:54:26] INFO: dailyhaz_summary table ready
+[2026-05-28 07:54:26] ERROR: Migration failed UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+ReferenceError: UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+    at migrateDailyHazSummary (C:\Projects\sql_to_postgres_service\src\services\migrateDailyHazSummary.js:46:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async C:\Projects\sql_to_postgres_service\server.js:18:9
+[2026-05-28 07:54:26] ERROR: Error occurred while migrating DAILYHAZ summary UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+ReferenceError: UPSERT_DAILYHAZ_SUMMARY_QUERY is not defined
+    at migrateDailyHazSummary (C:\Projects\sql_to_postgres_service\src\services\migrateDailyHazSummary.js:46:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async C:\Projects\sql_to_postgres_service\server.js:18:9
+[2026-05-28 07:55:11] INFO: Starting DAILYHAZ summary migration
+[2026-05-28 07:55:11] INFO: Connected to SQL Server
+[2026-05-28 07:55:12] INFO: Fetched 39 aggregated rows
+[2026-05-28 07:55:14] INFO: dailyhaz_summary table ready
+[2026-05-28 07:55:26] INFO: Successfully synced 39 DAILYHAZ summary rows
+[2026-05-28 07:55:26] INFO: Migration completed successfully in 14.45s
+[2026-05-28 14:07:57] INFO: Starting full SQL Server to PostgreSQL migration
+[2026-05-28 14:07:58] INFO: Fetched 5 tables from SQL Server
+[2026-05-28 14:07:58] INFO: Tables: HAZDATE, WORKMST, DAILYHAZ, DlyImport, DlyImport_Log
+[2026-05-28 14:07:58] INFO: Starting migration pipeline for table: HAZDATE
+[2026-05-28 14:07:58] INFO: Starting PostgreSQL table creation for: HAZDATE
+[2026-05-28 14:07:58] INFO: Connecting to SQL Server
+[2026-05-28 14:07:58] INFO: Successfully connected to SQL Server
+[2026-05-28 14:07:58] INFO: Fetching column metadata for table: HAZDATE
+[2026-05-28 14:07:58] INFO: Column metadata fetched for table: HAZDATE
+[2026-05-28 14:07:58] INFO: Found 9 columns in table: HAZDATE
+[2026-05-28 14:07:58] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: HAZDATE
+[2026-05-28 14:07:58] INFO: Mapped column "SNO" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:07:58] INFO: Mapped column "DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:07:58] INFO: Mapped column "CDATE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:07:58] INFO: Mapped column "CMON" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:07:58] INFO: Mapped column "DAY" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:07:58] INFO: Mapped column "KAMJARI_UP" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:07:58] INFO: Mapped column "UPD_REM" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:07:58] INFO: Mapped column "UPD_DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:07:58] INFO: Mapped column "DATA_DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:07:58] INFO: Completed datatype mapping for table: HAZDATE
+[2026-05-28 14:07:58] INFO: Generating PostgreSQL CREATE TABLE query for: HAZDATE
+[2026-05-28 14:07:58] INFO: Generated CREATE TABLE query for: HAZDATE
+[2026-05-28 14:07:58] INFO: Executing CREATE TABLE query for: HAZDATE
+[2026-05-28 14:08:01] INFO: Successfully created PostgreSQL table: HAZDATE
+[2026-05-28 14:08:01] INFO: PostgreSQL table creation completed for HAZDATE in 3.05s
+[2026-05-28 14:08:01] INFO: PostgreSQL table ready: HAZDATE
+[2026-05-28 14:08:01] INFO: Starting migration for table: HAZDATE
+[2026-05-28 14:08:01] INFO: Connected to SQL Server for table: HAZDATE
+[2026-05-28 14:08:01] INFO: Fetched 12 rows from SQL Server table: HAZDATE
+[2026-05-28 14:08:01] INFO: Found 9 columns in table: HAZDATE
+[2026-05-28 14:08:01] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:08:01] INFO: Processing batch 1
+[2026-05-28 14:08:01] INFO: Inserted batch 1 with 12 rows
+[2026-05-28 14:08:01] INFO: Migration completed for table: HAZDATE in 0.29s
+[2026-05-28 14:08:01] INFO: Data migration completed for table: HAZDATE
+[2026-05-28 14:08:01] INFO: Starting migration pipeline for table: WORKMST
+[2026-05-28 14:08:01] INFO: Starting PostgreSQL table creation for: WORKMST
+[2026-05-28 14:08:01] INFO: Connecting to SQL Server
+[2026-05-28 14:08:01] INFO: Successfully connected to SQL Server
+[2026-05-28 14:08:01] INFO: Fetching column metadata for table: WORKMST
+[2026-05-28 14:08:01] INFO: Column metadata fetched for table: WORKMST
+[2026-05-28 14:08:01] INFO: Found 20 columns in table: WORKMST
+[2026-05-28 14:08:01] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: WORKMST
+[2026-05-28 14:08:01] INFO: Mapped column "WORKCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "WORKDESP" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "GARDEN_COD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "P_F_O" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "KAM_CODE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "YR_B_MAN" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "YR_B_WAGE" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "CATAGORY" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "grpcode" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:01] INFO: Mapped column "task_Unit" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "task_rate" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:01] INFO: Mapped column "task_rateYN" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "active" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "actdate" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:01] INFO: Mapped column "reason4Inactive" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "InactiveDate" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:01] INFO: Mapped column "DlyMandays" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "FntlyMandays" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "BalMandays" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:01] INFO: Mapped column "DlyBudEnt_date" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:01] INFO: Completed datatype mapping for table: WORKMST
+[2026-05-28 14:08:01] INFO: Generating PostgreSQL CREATE TABLE query for: WORKMST
+[2026-05-28 14:08:01] INFO: Generated CREATE TABLE query for: WORKMST
+[2026-05-28 14:08:01] INFO: Executing CREATE TABLE query for: WORKMST
+[2026-05-28 14:08:01] INFO: Successfully created PostgreSQL table: WORKMST
+[2026-05-28 14:08:01] INFO: PostgreSQL table creation completed for WORKMST in 0.28s
+[2026-05-28 14:08:01] INFO: PostgreSQL table ready: WORKMST
+[2026-05-28 14:08:01] INFO: Starting migration for table: WORKMST
+[2026-05-28 14:08:01] INFO: Connected to SQL Server for table: WORKMST
+[2026-05-28 14:08:01] INFO: Fetched 124 rows from SQL Server table: WORKMST
+[2026-05-28 14:08:01] INFO: Found 20 columns in table: WORKMST
+[2026-05-28 14:08:01] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:08:01] INFO: Processing batch 1
+[2026-05-28 14:08:02] INFO: Inserted batch 1 with 124 rows
+[2026-05-28 14:08:02] INFO: Migration completed for table: WORKMST in 0.58s
+[2026-05-28 14:08:02] INFO: Data migration completed for table: WORKMST
+[2026-05-28 14:08:02] INFO: Starting migration pipeline for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Starting PostgreSQL table creation for: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Connecting to SQL Server
+[2026-05-28 14:08:02] INFO: Successfully connected to SQL Server
+[2026-05-28 14:08:02] INFO: Fetching column metadata for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Column metadata fetched for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Found 32 columns in table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Mapped column "PAYCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "PAYSLIPCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "bkno" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:02] INFO: Mapped column "GRP_CODE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "GARDEN_COD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "P_F_O" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "KAM_CODE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "ACTIVE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "WDAY" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "HAZ_TYPE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "KG" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "KG_M" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "KG_N" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "KG_E" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "LEAF_AMT" from SQL type "money" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:08:02] INFO: Mapped column "DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:02] INFO: Mapped column "WAGE" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:08:02] INFO: Mapped column "DELETE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "EXTRA" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:08:02] INFO: Mapped column "OT_HR" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "WORKCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "slno" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "incentiv" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:02] INFO: Mapped column "fk_sirder_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:02] INFO: Mapped column "fk_add_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:02] INFO: Mapped column "fk_edit_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:02] INFO: Mapped column "date_add" from SQL type "date" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:02] INFO: Mapped column "date_edit" from SQL type "date" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:02] INFO: Mapped column "from_logger" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "Time1" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Mapped column "TIME12" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:02] INFO: Completed datatype mapping for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Generating PostgreSQL CREATE TABLE query for: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Generated CREATE TABLE query for: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Executing CREATE TABLE query for: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Successfully created PostgreSQL table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: PostgreSQL table creation completed for DAILYHAZ in 0.29s
+[2026-05-28 14:08:02] INFO: PostgreSQL table ready: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Starting migration for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Connected to SQL Server for table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Fetched 2247 rows from SQL Server table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Found 32 columns in table: DAILYHAZ
+[2026-05-28 14:08:02] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:08:02] INFO: Processing batch 1
+[2026-05-28 14:08:03] INFO: Inserted batch 1 with 1000 rows
+[2026-05-28 14:08:03] INFO: Processing batch 2
+[2026-05-28 14:08:04] INFO: Inserted batch 2 with 1000 rows
+[2026-05-28 14:08:04] INFO: Processing batch 3
+[2026-05-28 14:08:04] INFO: Inserted batch 3 with 247 rows
+[2026-05-28 14:08:04] INFO: Migration completed for table: DAILYHAZ in 2.14s
+[2026-05-28 14:08:04] INFO: Data migration completed for table: DAILYHAZ
+[2026-05-28 14:08:04] INFO: Starting migration pipeline for table: DlyImport
+[2026-05-28 14:08:04] INFO: Starting PostgreSQL table creation for: DlyImport
+[2026-05-28 14:08:04] INFO: Connecting to SQL Server
+[2026-05-28 14:08:04] INFO: Successfully connected to SQL Server
+[2026-05-28 14:08:04] INFO: Fetching column metadata for table: DlyImport
+[2026-05-28 14:08:04] INFO: Column metadata fetched for table: DlyImport
+[2026-05-28 14:08:04] INFO: Found 35 columns in table: DlyImport
+[2026-05-28 14:08:04] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: DlyImport
+[2026-05-28 14:08:04] INFO: Mapped column "PAYCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "bkno" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:04] INFO: Mapped column "GARDEN_COD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "HAZ_TYPE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "KG" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "KG_M" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "KG_N" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "KG_E" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "KG_4" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:04] INFO: Mapped column "WAGE" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:08:04] INFO: Mapped column "WORKCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "fk_sirder_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:04] INFO: Mapped column "fk_add_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:04] INFO: Mapped column "rec_type" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Section_01" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Section_02" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Section_03" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Section_04" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "TiccaNonTicca1" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "TiccaNonTicca2" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "TiccaNonTicca3" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "TiccaNonTicca4" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Garden_divsion" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:04] INFO: Mapped column "Optrcode" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "MachineNo" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Time1" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Time2" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Time3" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "Time4" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "StartTime" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "EndTime" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "payslipcd" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "P_F_O" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:04] INFO: Mapped column "id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:04] INFO: Completed datatype mapping for table: DlyImport
+[2026-05-28 14:08:04] INFO: Generating PostgreSQL CREATE TABLE query for: DlyImport
+[2026-05-28 14:08:04] INFO: Generated CREATE TABLE query for: DlyImport
+[2026-05-28 14:08:04] INFO: Executing CREATE TABLE query for: DlyImport
+[2026-05-28 14:08:05] INFO: Successfully created PostgreSQL table: DlyImport
+[2026-05-28 14:08:05] INFO: PostgreSQL table creation completed for DlyImport in 0.37s
+[2026-05-28 14:08:05] INFO: PostgreSQL table ready: DlyImport
+[2026-05-28 14:08:05] INFO: Starting migration for table: DlyImport
+[2026-05-28 14:08:05] INFO: Connected to SQL Server for table: DlyImport
+[2026-05-28 14:08:05] INFO: Fetched 1437 rows from SQL Server table: DlyImport
+[2026-05-28 14:08:05] INFO: Found 35 columns in table: DlyImport
+[2026-05-28 14:08:05] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:08:05] INFO: Processing batch 1
+[2026-05-28 14:08:05] INFO: Inserted batch 1 with 1000 rows
+[2026-05-28 14:08:05] INFO: Processing batch 2
+[2026-05-28 14:08:06] INFO: Inserted batch 2 with 437 rows
+[2026-05-28 14:08:06] INFO: Migration completed for table: DlyImport in 1.12s
+[2026-05-28 14:08:06] INFO: Data migration completed for table: DlyImport
+[2026-05-28 14:08:06] INFO: Starting migration pipeline for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Starting PostgreSQL table creation for: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Connecting to SQL Server
+[2026-05-28 14:08:06] INFO: Successfully connected to SQL Server
+[2026-05-28 14:08:06] INFO: Fetching column metadata for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Column metadata fetched for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Found 13 columns in table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Mapped column "trnDate" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:06] INFO: Mapped column "Fk_add_date" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:08:06] INFO: Mapped column "Fk_user_name" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "TableName" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "MachineNo" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "NoRecs" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "KG" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "KG_M" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "KG_N" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "KG_E" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "KG_4" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:08:06] INFO: Mapped column "WAGE" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:08:06] INFO: Mapped column "pk_dlog_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:08:06] INFO: Completed datatype mapping for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Generating PostgreSQL CREATE TABLE query for: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Generated CREATE TABLE query for: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Executing CREATE TABLE query for: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Successfully created PostgreSQL table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: PostgreSQL table creation completed for DlyImport_Log in 0.36s
+[2026-05-28 14:08:06] INFO: PostgreSQL table ready: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Starting migration for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Connected to SQL Server for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Fetched 127 rows from SQL Server table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Found 13 columns in table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:08:06] INFO: Processing batch 1
+[2026-05-28 14:08:06] INFO: Inserted batch 1 with 127 rows
+[2026-05-28 14:08:06] INFO: Migration completed for table: DlyImport_Log in 0.28s
+[2026-05-28 14:08:06] INFO: Data migration completed for table: DlyImport_Log
+[2026-05-28 14:08:06] INFO: Full migration process completed successfully
+[2026-05-28 14:13:51] INFO: Starting full SQL Server to PostgreSQL migration
+[2026-05-28 14:13:51] INFO: Fetched 5 tables from SQL Server
+[2026-05-28 14:13:51] INFO: Tables: HAZDATE, WORKMST, DAILYHAZ, DlyImport, DlyImport_Log
+[2026-05-28 14:13:51] INFO: Starting migration pipeline for table: HAZDATE
+[2026-05-28 14:13:51] INFO: Starting PostgreSQL table creation for: HAZDATE
+[2026-05-28 14:13:51] INFO: Connecting to SQL Server
+[2026-05-28 14:13:51] INFO: Successfully connected to SQL Server
+[2026-05-28 14:13:51] INFO: Fetching column metadata for table: HAZDATE
+[2026-05-28 14:13:51] INFO: Column metadata fetched for table: HAZDATE
+[2026-05-28 14:13:51] INFO: Found 9 columns in table: HAZDATE
+[2026-05-28 14:13:51] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: HAZDATE
+[2026-05-28 14:13:51] INFO: Mapped column "SNO" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:51] INFO: Mapped column "DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:51] INFO: Mapped column "CDATE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:51] INFO: Mapped column "CMON" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:51] INFO: Mapped column "DAY" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:51] INFO: Mapped column "KAMJARI_UP" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:51] INFO: Mapped column "UPD_REM" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:51] INFO: Mapped column "UPD_DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:51] INFO: Mapped column "DATA_DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:51] INFO: Completed datatype mapping for table: HAZDATE
+[2026-05-28 14:13:51] INFO: Generating PostgreSQL CREATE TABLE query for: HAZDATE
+[2026-05-28 14:13:51] INFO: Generated CREATE TABLE query for: HAZDATE
+[2026-05-28 14:13:51] INFO: Executing CREATE TABLE query for: HAZDATE
+[2026-05-28 14:13:53] INFO: Successfully created PostgreSQL table: HAZDATE
+[2026-05-28 14:13:53] INFO: PostgreSQL table creation completed for HAZDATE in 1.86s
+[2026-05-28 14:13:53] INFO: PostgreSQL table ready: HAZDATE
+[2026-05-28 14:13:53] INFO: Starting migration for table: HAZDATE
+[2026-05-28 14:13:53] INFO: Connected to SQL Server for table: HAZDATE
+[2026-05-28 14:13:53] INFO: Fetched 12 rows from SQL Server table: HAZDATE
+[2026-05-28 14:13:53] INFO: Found 9 columns in table: HAZDATE
+[2026-05-28 14:13:53] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:13:53] INFO: Processing batch 1
+[2026-05-28 14:13:53] INFO: Inserted batch 1 with 12 rows
+[2026-05-28 14:13:53] INFO: Migration completed for table: HAZDATE in 0.28s
+[2026-05-28 14:13:53] INFO: Data migration completed for table: HAZDATE
+[2026-05-28 14:13:53] INFO: Starting migration pipeline for table: WORKMST
+[2026-05-28 14:13:53] INFO: Starting PostgreSQL table creation for: WORKMST
+[2026-05-28 14:13:53] INFO: Connecting to SQL Server
+[2026-05-28 14:13:53] INFO: Successfully connected to SQL Server
+[2026-05-28 14:13:53] INFO: Fetching column metadata for table: WORKMST
+[2026-05-28 14:13:53] INFO: Column metadata fetched for table: WORKMST
+[2026-05-28 14:13:53] INFO: Found 20 columns in table: WORKMST
+[2026-05-28 14:13:53] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: WORKMST
+[2026-05-28 14:13:53] INFO: Mapped column "WORKCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "WORKDESP" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "GARDEN_COD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "P_F_O" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "KAM_CODE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "YR_B_MAN" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "YR_B_WAGE" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "CATAGORY" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "grpcode" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:53] INFO: Mapped column "task_Unit" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "task_rate" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:53] INFO: Mapped column "task_rateYN" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "active" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "actdate" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:53] INFO: Mapped column "reason4Inactive" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "InactiveDate" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:53] INFO: Mapped column "DlyMandays" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "FntlyMandays" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "BalMandays" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:53] INFO: Mapped column "DlyBudEnt_date" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:53] INFO: Completed datatype mapping for table: WORKMST
+[2026-05-28 14:13:53] INFO: Generating PostgreSQL CREATE TABLE query for: WORKMST
+[2026-05-28 14:13:53] INFO: Generated CREATE TABLE query for: WORKMST
+[2026-05-28 14:13:53] INFO: Executing CREATE TABLE query for: WORKMST
+[2026-05-28 14:13:53] INFO: Successfully created PostgreSQL table: WORKMST
+[2026-05-28 14:13:53] INFO: PostgreSQL table creation completed for WORKMST in 0.27s
+[2026-05-28 14:13:53] INFO: PostgreSQL table ready: WORKMST
+[2026-05-28 14:13:53] INFO: Starting migration for table: WORKMST
+[2026-05-28 14:13:53] INFO: Connected to SQL Server for table: WORKMST
+[2026-05-28 14:13:53] INFO: Fetched 124 rows from SQL Server table: WORKMST
+[2026-05-28 14:13:53] INFO: Found 20 columns in table: WORKMST
+[2026-05-28 14:13:53] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:13:53] INFO: Processing batch 1
+[2026-05-28 14:13:54] INFO: Inserted batch 1 with 124 rows
+[2026-05-28 14:13:54] INFO: Migration completed for table: WORKMST in 0.60s
+[2026-05-28 14:13:54] INFO: Data migration completed for table: WORKMST
+[2026-05-28 14:13:54] INFO: Starting migration pipeline for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Starting PostgreSQL table creation for: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Connecting to SQL Server
+[2026-05-28 14:13:54] INFO: Successfully connected to SQL Server
+[2026-05-28 14:13:54] INFO: Fetching column metadata for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Column metadata fetched for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Found 32 columns in table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Mapped column "PAYCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "PAYSLIPCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "bkno" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:54] INFO: Mapped column "GRP_CODE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "GARDEN_COD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "P_F_O" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "KAM_CODE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "ACTIVE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "WDAY" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "HAZ_TYPE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "KG" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "KG_M" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "KG_N" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "KG_E" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "LEAF_AMT" from SQL type "money" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:13:54] INFO: Mapped column "DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:54] INFO: Mapped column "WAGE" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:13:54] INFO: Mapped column "DELETE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "EXTRA" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:13:54] INFO: Mapped column "OT_HR" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "WORKCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "slno" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "incentiv" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:54] INFO: Mapped column "fk_sirder_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:54] INFO: Mapped column "fk_add_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:54] INFO: Mapped column "fk_edit_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:54] INFO: Mapped column "date_add" from SQL type "date" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:54] INFO: Mapped column "date_edit" from SQL type "date" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:54] INFO: Mapped column "from_logger" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "Time1" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Mapped column "TIME12" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:54] INFO: Completed datatype mapping for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Generating PostgreSQL CREATE TABLE query for: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Generated CREATE TABLE query for: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Executing CREATE TABLE query for: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Successfully created PostgreSQL table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: PostgreSQL table creation completed for DAILYHAZ in 0.28s
+[2026-05-28 14:13:54] INFO: PostgreSQL table ready: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Starting migration for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Connected to SQL Server for table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Fetched 2247 rows from SQL Server table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Found 32 columns in table: DAILYHAZ
+[2026-05-28 14:13:54] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:13:54] INFO: Processing batch 1
+[2026-05-28 14:13:55] INFO: Inserted batch 1 with 1000 rows
+[2026-05-28 14:13:55] INFO: Processing batch 2
+[2026-05-28 14:13:56] INFO: Inserted batch 2 with 1000 rows
+[2026-05-28 14:13:56] INFO: Processing batch 3
+[2026-05-28 14:13:56] INFO: Inserted batch 3 with 247 rows
+[2026-05-28 14:13:56] INFO: Migration completed for table: DAILYHAZ in 2.08s
+[2026-05-28 14:13:56] INFO: Data migration completed for table: DAILYHAZ
+[2026-05-28 14:13:56] INFO: Starting migration pipeline for table: DlyImport
+[2026-05-28 14:13:56] INFO: Starting PostgreSQL table creation for: DlyImport
+[2026-05-28 14:13:56] INFO: Connecting to SQL Server
+[2026-05-28 14:13:56] INFO: Successfully connected to SQL Server
+[2026-05-28 14:13:56] INFO: Fetching column metadata for table: DlyImport
+[2026-05-28 14:13:56] INFO: Column metadata fetched for table: DlyImport
+[2026-05-28 14:13:56] INFO: Found 35 columns in table: DlyImport
+[2026-05-28 14:13:56] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: DlyImport
+[2026-05-28 14:13:56] INFO: Mapped column "PAYCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "bkno" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:56] INFO: Mapped column "GARDEN_COD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "HAZ_TYPE" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "KG" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "KG_M" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "KG_N" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "KG_E" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "KG_4" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "DATE" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:56] INFO: Mapped column "WAGE" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:13:56] INFO: Mapped column "WORKCD" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "fk_sirder_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:56] INFO: Mapped column "fk_add_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:56] INFO: Mapped column "rec_type" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Section_01" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Section_02" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Section_03" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Section_04" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "TiccaNonTicca1" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "TiccaNonTicca2" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "TiccaNonTicca3" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "TiccaNonTicca4" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Garden_divsion" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:56] INFO: Mapped column "Optrcode" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "MachineNo" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Time1" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Time2" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Time3" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "Time4" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "StartTime" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "EndTime" from SQL type "time" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "payslipcd" from SQL type "varchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "P_F_O" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:56] INFO: Mapped column "id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:56] INFO: Completed datatype mapping for table: DlyImport
+[2026-05-28 14:13:56] INFO: Generating PostgreSQL CREATE TABLE query for: DlyImport
+[2026-05-28 14:13:56] INFO: Generated CREATE TABLE query for: DlyImport
+[2026-05-28 14:13:56] INFO: Executing CREATE TABLE query for: DlyImport
+[2026-05-28 14:13:56] INFO: Successfully created PostgreSQL table: DlyImport
+[2026-05-28 14:13:56] INFO: PostgreSQL table creation completed for DlyImport in 0.28s
+[2026-05-28 14:13:56] INFO: PostgreSQL table ready: DlyImport
+[2026-05-28 14:13:56] INFO: Starting migration for table: DlyImport
+[2026-05-28 14:13:56] INFO: Connected to SQL Server for table: DlyImport
+[2026-05-28 14:13:57] INFO: Fetched 1437 rows from SQL Server table: DlyImport
+[2026-05-28 14:13:57] INFO: Found 35 columns in table: DlyImport
+[2026-05-28 14:13:57] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:13:57] INFO: Processing batch 1
+[2026-05-28 14:13:57] INFO: Inserted batch 1 with 1000 rows
+[2026-05-28 14:13:57] INFO: Processing batch 2
+[2026-05-28 14:13:57] INFO: Inserted batch 2 with 437 rows
+[2026-05-28 14:13:57] INFO: Migration completed for table: DlyImport in 1.00s
+[2026-05-28 14:13:57] INFO: Data migration completed for table: DlyImport
+[2026-05-28 14:13:57] INFO: Starting migration pipeline for table: DlyImport_Log
+[2026-05-28 14:13:57] INFO: Starting PostgreSQL table creation for: DlyImport_Log
+[2026-05-28 14:13:57] INFO: Connecting to SQL Server
+[2026-05-28 14:13:57] INFO: Successfully connected to SQL Server
+[2026-05-28 14:13:57] INFO: Fetching column metadata for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Column metadata fetched for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Found 13 columns in table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Starting SQL Server to PostgreSQL datatype mapping for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Mapped column "trnDate" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:58] INFO: Mapped column "Fk_add_date" from SQL type "datetime" to PostgreSQL type "TIMESTAMP"
+[2026-05-28 14:13:58] INFO: Mapped column "Fk_user_name" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "TableName" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "MachineNo" from SQL type "nvarchar" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "NoRecs" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "KG" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "KG_M" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "KG_N" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "KG_E" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "KG_4" from SQL type "float" to PostgreSQL type "TEXT"
+[2026-05-28 14:13:58] INFO: Mapped column "WAGE" from SQL type "numeric" to PostgreSQL type "NUMERIC"
+[2026-05-28 14:13:58] INFO: Mapped column "pk_dlog_id" from SQL type "int" to PostgreSQL type "INTEGER"
+[2026-05-28 14:13:58] INFO: Completed datatype mapping for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Generating PostgreSQL CREATE TABLE query for: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Generated CREATE TABLE query for: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Executing CREATE TABLE query for: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Successfully created PostgreSQL table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: PostgreSQL table creation completed for DlyImport_Log in 0.28s
+[2026-05-28 14:13:58] INFO: PostgreSQL table ready: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Starting migration for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Connected to SQL Server for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Fetched 127 rows from SQL Server table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Found 13 columns in table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Starting batch inserts into PostgreSQL
+[2026-05-28 14:13:58] INFO: Processing batch 1
+[2026-05-28 14:13:58] INFO: Inserted batch 1 with 127 rows
+[2026-05-28 14:13:58] INFO: Migration completed for table: DlyImport_Log in 0.28s
+[2026-05-28 14:13:58] INFO: Data migration completed for table: DlyImport_Log
+[2026-05-28 14:13:58] INFO: Full migration process completed successfully in 7.28s
+[2026-05-28 14:13:58] INFO: Full migration process completed successfully in 7.28s
