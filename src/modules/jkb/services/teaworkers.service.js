@@ -1,16 +1,17 @@
 const prisma = require("../../../../prisma/prismaClient");
+const { convertPgResult } = require("../../../utils/typeConverter");
 
 const getDailyHazSummary = async () => {
     const data = await prisma.$queryRaw`
         SELECT
-            workcd,
-            COUNT(workcd) AS total_count,
-            SUM(wage) AS total_wage
-        FROM DAILYHAZ
-        GROUP BY workcd
+            "WORKCD",
+             COUNT("WORKCD") AS total_count,
+            SUM("WAGE") AS total_wage
+        FROM "DAILYHAZ"
+        GROUP BY "WORKCD"
     `;
 
-    return data;
+    return convertPgResult(data);
 };
 
 module.exports = {
