@@ -1,5 +1,26 @@
 const dailyHazService = require("../services/teaworkers.service");
 
+const workSummaryService = require("../services/workSummary.service");
+
+const getWorkSummary = async (req, res) => {
+    try {
+        const data = await workSummaryService.getWorkSummary();
+
+        return res.status(200).json({
+            success: true,
+            data
+        });
+    } catch (error) {
+        console.error(error);
+
+        return res.status(500).json({
+            success: false,
+            message: "Failed to fetch work summary",
+            error: error.message
+        });
+    }
+};
+
 const getDailyHazSummary = async (req, res) => {
     try {
         const data = await dailyHazService.getDailyHazSummary();
@@ -20,5 +41,6 @@ const getDailyHazSummary = async (req, res) => {
 };
 
 module.exports = {
+    getWorkSummary,
     getDailyHazSummary
 };
