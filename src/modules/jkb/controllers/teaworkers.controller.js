@@ -1,6 +1,6 @@
 const dailyHazService = require("../services/teaworkers.service");
 
-const workSummaryService = require("../services/workSummary.service");
+const workSummaryService = require("../services/teaworkers.service");
 
 const getWorkSummary = async (req, res) => {
     try {
